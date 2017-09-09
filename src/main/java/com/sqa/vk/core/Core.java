@@ -1,6 +1,9 @@
 package com.sqa.vk.core;
 
+import org.apache.log4j.*;
 import org.openqa.selenium.*;
+
+import com.sqa.vk.helpers.*;
 
 public class Core {
 
@@ -9,6 +12,8 @@ public class Core {
 	protected WebDriver driver;
 
 	private BasicTest curTest;
+
+	private Logger log;
 
 	public Core(BasicTest test) {
 		this.curTest = test;
@@ -35,6 +40,14 @@ public class Core {
 
 	public WebDriver getDriver() {
 		return this.driver;
+	}
+
+	public Logger getLog() {
+		return this.log;
+	}
+
+	public String getProp(String propName) {
+		return AutoBasics.getProp(propName, "src/main/resources/", "config.properties", getLog());
 	}
 
 	public boolean isElementPresent(By locator) {
