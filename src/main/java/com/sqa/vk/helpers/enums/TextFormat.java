@@ -5,7 +5,7 @@
  * Instructor: Jean-francois Nepton<br>
  * Created: Sep 9, 2017
  */
-package com.sqa.vk.helpers;
+package com.sqa.vk.helpers.enums;
 
 /**
  * TextFormat //ADDD (description of class)

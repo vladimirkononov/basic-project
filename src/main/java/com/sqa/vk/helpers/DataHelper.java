@@ -9,10 +9,12 @@ import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.*;
 
+import com.sqa.vk.helpers.enums.*;
 import com.sqa.vk.helpers.exceptions.*;
 
 public class DataHelper {
 
+	// Method to set two dimensional array to 0 value
 	public static void clearArray(Object[][] array) {
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array[i].length; j++) {
@@ -28,6 +30,7 @@ public class DataHelper {
 	 * @return
 	 */
 	public static String displayData(Object[][] data) {
+		// Initializing sb variable to build a string of data
 		StringBuilder sb = new StringBuilder();
 		// TODO Create two loops, one within another to add
 		// all items to sb.

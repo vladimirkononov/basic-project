@@ -13,7 +13,7 @@ public class Core {
 
 	private BasicTest curTest;
 
-	private Logger log;
+	private Logger log = Logger.getLogger(this.getClass());
 
 	public Core(BasicTest test) {
 		this.curTest = test;
