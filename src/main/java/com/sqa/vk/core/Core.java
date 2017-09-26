@@ -7,6 +7,8 @@ import com.sqa.vk.helpers.*;
 
 public class Core {
 
+	private static int count = 1;
+
 	private String baseUrl;
 
 	protected WebDriver driver;
@@ -60,5 +62,14 @@ public class Core {
 
 	public void setDriver(WebDriver driver) {
 		this.driver = driver;
+	}
+
+	public void takeScreenshot() {
+		AutoBasics.takeScreenshot("screenshots/", "AutoTest" + count, getDriver(), this.getLog());
+		count++;
+	}
+
+	public void takeScreenshot(String name) {
+		AutoBasics.takeScreenshot("screenshots/", name, getDriver(), this.getLog());
 	}
 }

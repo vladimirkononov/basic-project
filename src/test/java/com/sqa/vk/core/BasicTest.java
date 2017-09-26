@@ -31,9 +31,30 @@ public class BasicTest extends Core {
 		super(baseUrl);
 	}
 
+	/**
+	 *
+	 */
+	public void setUpChrome() {
+		// TODO Auto-generated method stub
+	}
+
 	@BeforeClass
 	public void setupDriver() {
 		this.driver = new FirefoxDriver();
+	}
+
+	/**
+	 *
+	 */
+	public void setUpFirefox() {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 *
+	 */
+	public void setUpIE() {
+		// TODO Auto-generated method stub
 	}
 
 	@BeforeMethod
